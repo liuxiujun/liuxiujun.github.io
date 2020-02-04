@@ -18,3 +18,11 @@ deploy:
   on:
     branch: hexo-source
   local-dir: public
+# Handle git submodules yourself
+git:
+    submodules: false
+# Use sed to replace the SSH URL with the public URL, then initialize submodules
+before_install:
+  # 9fde39a88888f9a80553a1cdab9feb750e0a5b1b
+    - sed -i 's/git@github.com:/https:\/\/github.com\//' .gitmodules
+    - git submodule update --init --recursive
