@@ -39,7 +39,7 @@ docker-compose up -d
 
 ### 访问8500
 
-balabala...
+...
 
 ### 测试consul DNS 解析
 
@@ -271,5 +271,4 @@ def index():
 
 到这就算成功略懂了
 
-写惯了java， 第一次用python没有类型感觉有点虐。。。  下一篇试试php
 
