@@ -1,5 +1,5 @@
 ---
-title: Tags
+title: 标签
 date: 2020-02-05 11:32:04
 type: "tags"
 layout: tag-index
