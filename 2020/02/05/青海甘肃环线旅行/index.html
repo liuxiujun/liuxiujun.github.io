@@ -1,0 +1,345 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" xmlns:v-bind="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title>青海甘肃环线旅行 - liuxiujun</title>
+<meta charset="utf-8">
+<meta name="X-UA-Compatible" content="IE=edge">
+<meta name="author" content="liuxiujun">
+<meta name="description" content="去年春节在拉萨租车转了几天意犹未尽，原本今年的计划是自驾滇藏线进青藏线出，算了下只是进藏路线大概就需要7天左右， ...">
+<meta name="keywords" content="">
+
+<link rel="alternate" type="application/atom+xml" title="ATOM 1.0" href="/atom.xml">
+
+    <meta charset="utf-8">
+    <meta name="X-UA-Compatible" content="IE=edge">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <meta content="telephone=no" name="format-detection">
+    <meta name="renderer" content="webkit">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha256-eSi1q2PG6J7g7ib17yAaWMcrr5GrtohYChqibrV7PBE=" crossorigin="anonymous">
+<link rel="stylesheet" href="/css/journal.css?36315554">
+
+<script src="/js/loadCSS.js"></script>
+<script>
+    loadCSS("https://fonts.googleapis.com/css?family=Lora|Montserrat|Fira+Mono|Material+Icons");
+    (function (d) {
+        var config = {
+                kitId: 'dwg1tuc',
+                scriptTimeout: 3000,
+                async: true
+            },
+            h = d.documentElement, t = setTimeout(function () {
+                h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive";
+            }, config.scriptTimeout), tk = d.createElement("script"), f = false,
+            s = d.getElementsByTagName("script")[0], a;
+        h.className += " wf-loading";
+        tk.src = 'https://use.typekit.net/' + config.kitId + '.js';
+        tk.async = true;
+        tk.onload = tk.onreadystatechange = function () {
+            a = this.readyState;
+            if (f || a && a != "complete" && a != "loaded") return;
+            f = true;
+            clearTimeout(t);
+            try {
+                Typekit.load(config)
+            } catch (e) {
+            }
+        };
+        s.parentNode.insertBefore(tk, s)
+    })(document);
+</script>
+<noscript>
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Lora|Montserrat|Anonymous+Pro:400|Material+Icons"/>
+</noscript>
+<meta name="generator" content="Hexo 4.2.0"></head>
+<body>
+<div id="top"></div>
+<div id="app">
+<div class="single-column-drawer-container" ref="drawer"
+     v-bind:class="{ 'single-column-drawer-container-active': isDrawerOpen }">
+    <div class="drawer-content">
+        <div class="drawer-menu">
+            <a class="a-block drawer-menu-item false" href="https://liuxiujun.github.into">
+                首页
+            </a>
+            
+            <a class="a-block drawer-menu-item false" href="/archives">
+                归档
+            </a>
+            
+
+            
+            
+            <a class="a-block drawer-menu-item false" href="/tags/index.html">
+                标签
+            </a>
+            
+
+            
+            <a class="a-block drawer-menu-item" href="/atom.xml">
+                RSS
+            </a>
+            
+        </div>
+    </div>
+</div>
+<transition name="fade">
+    <div v-bind:class="{ 'single-column-drawer-mask': mounted }" v-if="isDrawerOpen" v-on:click="toggleDrawer"></div>
+</transition>
+<nav ref="navBar" class="navbar sticky-top navbar-light single-column-nav-container">
+    <div ref="navBackground" class="nav-background"></div>
+    <div class="container container-narrow nav-content">
+        <button id="nav_dropdown_btn" class="nav-dropdown-toggle" type="button" v-on:click="toggleDrawer">
+            <i class="material-icons">
+                menu
+            </i>
+        </button>
+        <a ref="navTitle" class="navbar-brand" href="/">
+            liuxiujun
+        </a>
+    </div>
+</nav>
+<div class="single-column-header-container" ref="pageHead"
+     v-bind:style="{ transform: 'translateZ(0px) translateY('+.3*scrollY+'px)', opacity: 1-navOpacity }">
+    <a href="/">
+        <div class="single-column-header-title">liuxiujun</div>
+        <div class="single-column-header-subtitle"></div>
+    </a>
+</div>
+<div ref="sideContainer" class="side-container">
+    <a class="a-block nav-head false" href="/">
+        <div class="nav-title">
+            LiuXiujun<br>Notebook
+        </div>
+        <div class="nav-subtitle">
+            不务正业程序员的笔記
+        </div>
+    </a>
+
+    <div class="nav-link-list">
+        
+        <a class="a-block no-tint nav-link-item false" href="/archives">
+            归档
+        </a>
+        
+
+        
+        
+        <a class="a-block nav-link-item false" href="/tags/index.html">
+            标签
+        </a>
+        
+
+        
+        <a class="a-block no-tint nav-link-item" href="/atom.xml">
+            RSS
+        </a>
+        
+    </div>
+
+    
+    <div class="nav-footer">
+        Proudly published with Hexo<br>
+        
+        Theme <a href="https://github.com/SumiMakito/hexo-theme-journal/" target="_blank" rel="noreferrer noopener">Journal.</a> by <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopener">Makito</a><br>
+        
+        &copy; 2020 <a href="https://liuxiujun.github.into">liuxiujun</a>
+    </div>
+</div>
+<div ref="extraContainer" class="extra-container">
+    <div class="pagination">
+        <a id="globalBackToTop" class="pagination-action animated-visibility" href="#top" :class="{ invisible: scrollY == 0 }">
+            <i class="material-icons pagination-action-icon">
+                keyboard_arrow_up
+            </i>
+        </a>
+
+        
+    </div>
+</div>
+
+
+
+<div ref="streamContainer" class="stream-container">
+    <div class="post-list-container post-list-container-shadow">
+        <div class="post">
+            <div class="post-head-wrapper"
+                 style="background-image: url('/2020/02/05/青海甘肃环线旅行/1731581048515_.pic.jpg')">
+                <div class="post-title">
+                    青海甘肃环线旅行
+                    <div class="post-meta">
+                        <time datetime="2020-02-05T15:02:06.000Z" itemprop="datePublished">
+                            2020-02-05 15:02
+                        </time>&nbsp;
+                        
+    
+                        
+                        
+                        <i class="material-icons" style="">label</i>
+                        
+                        <a href='/tags/旅行/'>旅行</a>
+                        
+                        
+                    </div>
+                </div>
+            </div>
+    
+            <div class="post-body-wrapper">
+                <div class="post-body">
+                    <p>去年春节在拉萨租车转了几天意犹未尽，原本今年的计划是自驾滇藏线进青藏线出，算了下只是进藏路线大概就需要7天左右， 临时改计划来个青海甘肃大环线。</p>
+<p>用时9天半，6745km</p>
+<p><strong>DAY0    威海 - 淄博 445km</strong></p>
+<p>下班吃了顿水饺，加满油出发。还没出城就已经感觉自己像风一样自由，一顿操作猛如虎，一看码表五十五；</p>
+<p>在威青，青银高速上听着周杰伦开了5个多小时，虽然是夜里也没看着什么景，但还是挺开心的。凌晨下高速进淄博市里住宿。</p>
+<p><strong>DAY1    淄博 - 平遥 603km</strong></p>
+<p>上午出发走青银，东吕高速，山东路段除了济南附近很堵，其余部分路况非常好，服务区很干净吃饭也很平价，完全颠覆了对服务区印象。</p>
+<p>一路地形渐渐从平原变成了高山，从高山变成了丘陵，晚上到达平遥县，趁着夜色逛了逛古城，作为一个景点还算不错。</p>
+<p><img src="/images/J1/1231581041033_.pic.jpg" alt></p>
+<p><img src="/images/J1/1241581041033_.pic.jpg" alt></p>
+<p><img src="/images/J1/1251581041033_.pic.jpg" alt></p>
+<p>走了很远，在古城中心找到一家很火的饭馆，吃了平遥牛肉，烤姥姥，竹叶酒什么的地方特色。总体感觉没什么特色，景区平均水准。</p>
+<p>古城是迄今保存最完好的明清时代的汉民族县城，基本上保留了200年前的样子。很多当地人目前仍然住在古城里，沿街除了几个重点保护建筑其余无一例外的都商业化了。我还是对小巷子里当地人真实的生活更感兴趣，不过老婆觉得小路太黑会危险，所以基本上都挑大路走，一边走一边猜哪个是地主家，衙门，镖局…对有些房子还有住户感觉很新奇。</p>
+<p>回酒店的路上，看来往汽车开在古城的青砖路上，背景是各种饭馆，酒店，ktv，有种很魔幻的感觉。</p>
+<p><strong>DAY2    平遥 - 西宁 1124km</strong></p>
+<p>由于前一天抹黑进城，这天早上出发才在路上看清城市的样子，有点像走进了贾樟柯电影里的西北城市。</p>
+<p>这一天跑的比较远，走的青银，定武，京藏高速，全程一千来公里。一路上风景非常漂亮，黄土高坡上的窑洞，盘山路上的隧道，平原上望不到头的公路，每过一段时间就像到了一个全新的世界，第一次直观的感受到中国实在是太大了。看到各种神奇的地貌又叫不上名字，感觉非常有必要补习下地理知识。</p>
+<p>定武高速上漂亮的云。</p>
+<p><img src="/images/J1/1261581041033_.pic.jpg" alt></p>
+<p>风电园，照片里拍不出延绵几公里成千上万只风车的震撼。</p>
+<p><img src="/images/J1/1271581041033_.pic.jpg" alt></p>
+<p>敷衍的沙海绿洲服务区，这个标题党！</p>
+<p><img src="/images/J1/1281581041033_.pic.jpg" alt></p>
+<p>在平直的无人公路上测试了下小车速度居然能踩到164，感觉还有后劲，安全起见爽一下得了。</p>
+<p>晚上9点进入西宁市区，又饿又累，找了个清真饭馆本来没抱什么希望，点了手抓，回族大叔问我们凉着吃还是烤着吃，我俩都懵了心想这么糊弄吗凉着就想上，还是烤烤吧，不管怎么样吃口热乎的。万万没想到，这吃法开启了新世界的大门，炒炮仗配着烤手抓，把我俩好吃哭了，不得不说青海羊肉天下无双！</p>
+<p><img src="/images/J1/1291581041033_.pic.jpg" alt></p>
+<p>总结经验，后半程摸黑跑山路还是不安全的，连着开14个小时，第二天腰都直不起来，如果时间充裕每天跑5-6个小时会比较放松。</p>
+<p><strong>DAY3    西宁 - 青海湖 - 黑马河 238km</strong></p>
+<p>一觉快睡到中午，起来直奔东关清真寺附近的手抓店，去年路过西宁的时候吃过一次从此对青海羊肉念念不忘。</p>
+<p><img src="/images/J1/1311581041033_.pic.jpg" alt></p>
+<p>八宝茶味道很足，如果有时间可以喝上一天；照片里没拍上用碗装的酸奶，很好喝很过瘾。回族饭馆的东西实在太和胃口了，想留在西宁。</p>
+<p>吃饱喝足加满油出发，我们决定环线玩上一趟还要回西宁吃羊肉。</p>
+<p>出了市区，往西走京藏高速，G109很快就能到青海湖；</p>
+<p>提前查了路线没进二郎剑景区，花20块钱从藏族大娘的牧场直接开车到湖边，冰天雪地</p>
+<p><img src="/images/J1/1301581041033_.pic.jpg" alt></p>
+<p><img src="/images/J1/1711581046581_.pic.jpg" alt></p>
+<p>看着很好吃的小羊。</p>
+<p><img src="/images/J1/1331581041047_.pic.jpg" alt></p>
+<p>晚上5点左右到黑马河镇，这里有个日出点可以看到第二天青海湖上的日出。</p>
+<p>办完入住才知道这边冬季8点多日出，其实完全可以住在条件更好的共和县里，早起开2个小时左右可以赶上看日出。</p>
+<p>中间出点小插曲，撞到了一辆逆行的轿车，藏民不懂交规纠缠了2个小时才解决问题，好在车速不快人平安，车子也没出什么问题。</p>
+<p><strong>DAY4    黑马河 - 大柴旦 523km</strong></p>
+<p>天不亮起床来到日出点，结果是阴天，日出没看成，看着旁边车的情侣对着航拍机在那蹦哒了一早上，哈哈哈…</p>
+<p><img src="/images/J1/1341581041047_.pic.jpg" alt></p>
+<p>继续向西，走茶德，德小高速，从草原开进雪山。</p>
+<p><img src="/images/J1/1351581041047_.pic.jpg" alt></p>
+<p>路过茶卡盐湖打卡点，看着围起来的景区和一路的广告我们都没有进去的兴趣，远远看一眼直接路过了。</p>
+<p>傍晚开到大柴旦的翡翠湖，赶上日落，漂亮极了。</p>
+<p><img src="/images/J1/1361581041047_.pic.jpg" alt></p>
+<p><img src="/images/J1/1371581041047_.pic.jpg" alt></p>
+<p>大柴旦被雪山和湖泊环绕，像生活在仙境里。</p>
+<p>白天老婆说了一句晚上要是酒店过年不开怎么办，这乌鸦嘴，果然预定的酒店关门联系不上了，搞的差点除夕夜露宿街头，临时找了一家酒店没想到环境还很舒适，放好行李下楼吃饭，一出电梯正好碰上老板朝这个方向在拜财神，迎面一个大礼让我们迎上很尴尬，这酒店也太热情了。</p>
+<p>镇上饭馆都关了，只剩几家清真的，进去之后才知道回族人是不过春节的。 年夜饭点了炕锅羊肉，牛排，沙葱，青海酸菜，跟前一天在黑马河一样炕锅羊肉又点翻车了，严重怀疑这菜即便是正宗了也只能做到这种程度。</p>
+<p>街上很难看到行人，居民楼大部分黑着没几家亮灯，只有三四条街的镇子却到处都是酒店，能猜到旺季的时候这里一定是人山人海。</p>
+<p><strong>DAY5    大柴旦 - 南八仙 - 大柴旦 380km</strong></p>
+<p>这一天没什么具体行程，走哪算哪，前一天看到的翡翠湖实在是太漂亮了，所以上午我们决定还要去一趟。</p>
+<p>翡翠湖需要从一个化工厂旁的小路穿过去，因为是个咸水湖所以被厂子当作了盐场。目前还是免费的，看周边正在施工的进度，应该很快就会被改造成收费景区了。如果景区商业化了就会出现很多人造的东西，失去湖泊本来的样子，而不商业化我们又很难知道有这么漂亮的地方，在此陷入矛盾中。</p>
+<p>幸亏白天又来了一次，被这地方惊艳到了，水是翠绿色的，光折射率真高，看到了天空之境。</p>
+<p><img src="/images/J1/1391581041047_.pic.jpg" alt></p>
+<p><img src="/images/J1/1381581041047_.pic.jpg" alt></p>
+<p>一边吃着前一天的凉牛肉，一边向南八仙出发，尽管路上基本是冰雪，但还不至于用上防滑链。越往西轮胎印越少，雪后来往的车并不多， 直到遇见第一辆对向开来的车，我才意识到这是条双向车道。</p>
+<p><img src="/images/J1/1401581041047_.pic.jpg" alt></p>
+<p>南八仙是雅丹地貌，几亿年前地壳运动翻上来的海底，看着像大坟包。我想如果我是当年迷路的科考队员，徒步的话肯定也是走不出去，没导航连北都找不着。手欠的我关了地图发现手机无服务，导航也不能规划路线，尴尬了…其实这样随心所欲的往前开也挺开心的。</p>
+<p>溜达着想找个小山爬上去看看全貌，爬上去是一望无际的雅丹。</p>
+<p><img src="/images/J1/1671581043508_.pic.jpg" alt></p>
+<p>看着是坚硬的小山，其实是含盐的软土，混着雪踩上去拔不动脚，幸好带了两双鞋。</p>
+<p><img src="/images/J1/1421581041058_.pic.jpg" alt></p>
+<p>出发前多看了几眼地图，大致知道往前应该是格尔木，但没了导航又看不到一辆车确实心里还是有点虚，下次出门前一定要下离线地图，虽然顺着路开肯定不会丢，可一旦在不清楚里程的情况下开没了油，在这地方等过路车就要随缘了。</p>
+<p>无人区的无名公路很长，很催眠。</p>
+<p><img src="/images/J1/1721581048094_.pic.jpg" alt></p>
+<p>G315国道，意外收获，无计划的开到了这条最美沙漠公路上，阳光很好很暖和。</p>
+<p><img src="/images/J1/1431581041058_.pic.jpg" alt></p>
+<p><img src="/images/J1/1451581041058_.pic.jpg" alt></p>
+<p>往西是新疆阿克苏，往东是德令哈方向，傍晚路过小柴达木湖，太阳快落山了就没停车，看路牌上写着还有旧石器时代人类遗址，原始人还挺会找地方的，在这么漂亮的地方安家。</p>
+<p>天黑后我们又回到了冰天雪地的大柴旦，神奇的一天。</p>
+<p><strong>DAY6    大柴旦 - 敦煌 348km</strong></p>
+<p>早上有点不舍的离开干净暖和的酒店，这个漂亮的小镇没待够，很想退休后住在这里。</p>
+<p>全程走了一段公路，一段土路，最后翻过当金山进入甘肃界，三百来公里的路开了六七个小时，山路有一段连续26km的下坡，想起来去年在羊卓雍错把刹车踩软的事，当时没经验，拿瓶水浇一下刹车片就没事了。</p>
+<p>山坡上居然有个院子，在这荒山里怎么生活的？<br><img src="/images/J1/1461581041058_.pic.jpg" alt></p>
+<p>进甘肃境内越走越暖和，已经零上了，天黑前到了敦煌，不出所料由于疫情莫高窟和月牙泉都关了，只能远远的看一眼这个什么景区的大沙漠。</p>
+<p><img src="/images/J1/1471581041058_.pic.jpg" alt></p>
+<p>敦煌市里很干净，路上很多人为营造出来的古典元素，有点为了发展旅游业用力过猛的感觉。小吃街属于坑游客的地方，找了家高分饭馆，老板听到外地口音言语间急切的想宰上一刀，点了胡羊焖饼和烤羊排，说实话比西宁的手抓差远了，加上酒店的环境和服务态度都差，所以对这个城市的印象并不是很好。</p>
+<p>疫情的气氛已经变得紧张了，街上都带着口罩，老婆开玩笑说不会回去的路上没吃没住的吧…这嘴就跟开了光一样的准。</p>
+<p><strong>DAY7    敦煌 - 张掖 656km</strong></p>
+<p>早起出发，一路风景跟前一天大同小异，到了张掖出口感觉到气氛又紧张了，外地车牌查的很严，意料之中七彩丹霞地质公园也是关闭了。</p>
+<p><img src="/images/J1/1481581041058_.pic.jpg" alt></p>
+<p>张掖是个漂亮的小城，但我们更关心的是吃啥，转了半个城区没找到一家营业的饭馆，只能在超市买些速食。之后跑了几个药店，口罩，温度计，板蓝根都脱销了。</p>
+<p>隐隐觉得还是尽快返程比较好。</p>
+<p><strong>DAY8    张掖 - 武威 - 延安 1053km</strong></p>
+<p>按计划路线，这天要走G227经门源到西宁，刚开出10km左右被交警拦回掉头，国道沿途的村子害怕疫情私自堵路了，这就只能走连霍高速兰州方向，当即决定最短路线回威海。</p>
+<p>在连霍高速上张掖到武威段，有一片十几公里的古长城遗址，看起来很有年代感的残垣断壁，想到敦煌的赝品古城被游客们趋之若鹜，这里的真品却自生自灭，突然间有点感慨。老婆说这样也挺好，喜欢这种事物本来的样子，终究会尘归尘土归土。几句天聊的暮气横秋…</p>
+<p>夜里的风电园，风车上的小灯一闪一闪，变成了延绵几公里的小红点，绿色的杀马特探照灯对着天空一顿群魔乱舞…<br><img src="/images/J1/1491581041058_.pic.jpg" alt></p>
+<p>开了一天有些累，在马尔庄服务区开始犯困，临时决定去最近的延安过夜。</p>
+<p>路上突然想是不是应该考个A本，以后不干程序员了去开长途，我很有潜质啊，一边自驾一边工作也挺爽的…</p>
+<p>开到凌晨才进市区，意外收获的延安夜景。</p>
+<p><img src="/images/J1/1501581041064_.pic.jpg" alt></p>
+<p>到了预定的酒店，外地身份证居然不让住了，折腾到后半夜，到了第三家酒店登记量体温终于住了进来，看到有些酒店的通知29日开始劝退所有已入住客人，很庆幸能找到个住处。</p>
+<p><strong>DAY9    延安 - 威海 1376km</strong></p>
+<p>经过前一天找酒店，我们感觉今天应该不会很容易再找到一个住处了，索性直接一把开到威海吧。</p>
+<p>延安到山西段全程山路，翻山越岭穿隧道，山这边晴空万里穿过隧道另一边是能见度不足50m的大雾</p>
+<p><img src="/images/J1/1511581041065_.pic.jpg" alt></p>
+<p>青兰高速山西段连着3个服务区关闭真坑，找到能加油的服务区时就剩一格油了。</p>
+<p>傍晚在邯郸服务区里检查体温，老婆38度多，一下围上来一群穿着防护服的。心想这下坏了，这要是隔离十天半个月的，家里两只猫可就得凉了。待了一会儿又测了几次体温正常，医生说是你这车里空调太热了给吹的…有惊无险。</p>
+<p>进入山东界，跟山西相比山东高速真的很好跑，进度加快不少。一路上小服务区基本都关闭了无处停车，筋疲力尽的时候到了正常营业的天桥服务区，犹如黑夜中的一盏明灯。</p>
+<p>休息的时候刷到一条新闻，武汉一个哥们封城之前自驾玩儿去，封城之后回不去了，没吃没住的在高速上流浪了6天。我说这哥们真惨，现实版人在囧途啊，可以拍个电影了，老婆一边说自己笑不出来，一边狂笑。</p>
+<p>凌晨1点多回到了我们的出发地威海，有种过了很长时间的感觉，旅行真的会让时间变慢。</p>
+<p>新的一年好好学习好好工作，期待下一次出发。</p>
+
+                </div>
+            </div>
+    
+            <nav class="post-pagination">
+    
+    <span class="page-number"></span>
+    
+    <a class="older-posts" href="/2020/01/06/Mac%E5%B9%B3%E5%8F%B0VSCode%E9%85%8D%E7%BD%AEC51%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/">
+        下一篇<br>Mac平台VSCode配置C51开发环境
+    </a>
+    
+</nav>
+
+    
+            
+
+
+        </div>
+    </div>
+    <div class="single-column-footer">
+    Proudly published with Hexo<br>
+    
+    Theme <a href="https://github.com/SumiMakito/hexo-theme-journal/" target="_blank" rel="noreferrer noopener">Journal.</a> by <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopener">Makito</a><br>
+    
+    &copy; 2020 <a href="https://liuxiujun.github.into">liuxiujun</a>
+</div>
+</div>
+
+</div>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.4/dist/umd/popper.min.js"
+        integrity="sha256-EGs9T1xMHdvM1geM8jPpoo8EZ1V1VRsmcJz8OByENLA=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js"
+        integrity="sha256-VsEqElsCHSGmnmHXGQzvoWjWwoznFSZc6hs7ARLRacQ=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.min.js"
+        integrity="sha256-FtWfRI+thWlNz2sB3SJbwKx5PgMyKIVgwHCTwa3biXc=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/smooth-scroll@14.2.1/dist/smooth-scroll.polyfills.min.js"
+        integrity="sha256-CI4Gq5E0io1Pv0xM3qPM+NUIOhbIBvC3GiN1Y4KhXpw=" crossorigin="anonymous"></script>
+<script src="/js/journal.js?50409547"></script>
+
+
+
+</body>
+</html>
