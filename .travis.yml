@@ -7,7 +7,7 @@ branches:
   only:
     - hexo-source # build hexo-source branch only
 script:
-  - npm i --save hexo-renderer-ejs hexo-generator-archive hexo-generator-category-enhance hexo-generator-feed hexo-generator-index hexo-generator-tag hexo-asset-image
+  - npm i --save hexo-renderer-ejs hexo-generator-archive hexo-generator-category-enhance hexo-generator-feed hexo-generator-index hexo-generator-tag hexo-asset-image hexo-math
   - hexo generate # generate static files
 deploy:
   provider: pages
