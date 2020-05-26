@@ -4,16 +4,11 @@
 <html lang="zh-CN" xmlns:v-bind="http://www.w3.org/1999/xhtml">
 
 <head>
-    <!-- hexo-inject:begin --><!-- hexo-inject:end --><title>Mac平台VSCode配置C51开发环境 - liuxiujun</title>
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><title>循证式日程规划 - liuxiujun</title>
 <meta charset="utf-8">
 <meta name="X-UA-Compatible" content="IE=edge">
 <meta name="author" content="liuxiujun">
-<meta name="description" content="安装 sdcc 编译器
-1brew install sdcc
-
-安装CH341驱动
-
- 开发版集成了usb转串口模...">
+<meta name="description" content="作为一个软件开发人员不可避免的要涉及到工时评估的环节，到目前为止自己做过的和看到别人做的日程规划都是马马虎虎，当然...">
 <meta name="keywords" content="">
 
 <link rel="alternate" type="application/atom+xml" title="ATOM 1.0" href="/atom.xml">
@@ -25,7 +20,7 @@
     <meta name="renderer" content="webkit">
     <meta name="theme-color" content="#ffffff">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha256-eSi1q2PG6J7g7ib17yAaWMcrr5GrtohYChqibrV7PBE=" crossorigin="anonymous">
-<link rel="stylesheet" href="/css/journal.css?78026951">
+<link rel="stylesheet" href="/css/journal.css?55348971">
 
 <script src="/js/loadCSS.js"></script>
 <script>
@@ -175,10 +170,10 @@
             <div class="post-head-wrapper-text-only"
                  style="background-image: url('')">
                 <div class="post-title">
-                    Mac平台VSCode配置C51开发环境
+                    循证式日程规划
                     <div class="post-meta">
-                        <time datetime="2020-01-06T10:35:08.000Z" itemprop="datePublished">
-                            2020-01-06 10:35
+                        <time datetime="2020-05-26T11:47:20.000Z" itemprop="datePublished">
+                            2020-05-26 11:47
                         </time>&nbsp;
                         
     
@@ -195,51 +190,88 @@
     
             <div class="post-body-wrapper">
                 <div class="post-body">
-                    <p><strong>安装 sdcc 编译器</strong></p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew install sdcc</span><br></pre></td></tr></table></figure>
-
-<p><strong>安装CH341驱动</strong></p>
+                    <p>作为一个软件开发人员不可避免的要涉及到工时评估的环节，到目前为止自己做过的和看到别人做的日程规划都是马马虎虎，当然其中有很多原因，抛开决策层的一些因素，对如何准确客观的作出一份日程规划，很难找到一种科学、有效的评估方法。</p>
+<p>之前用过一些像禅道，redmine之类的项目管理软件，但毫无例外这些东西都变成了开发人员的负担，最后要么变成形式主义的日报周报，要么不得不弃用。对待所谓项目管理工具的态度，我认为这些只能起到辅助作用，期望用一套银弹式的工具彻底解决问题是不现实的。随着管理思维和方法的提升，辅助工具的引入应该是自然而然的事情，甚至可以说只要方法得当，一个简单的excel表格同样也可以优雅的解决问题。而很多时候这两件事情都被搞反了。</p>
+<p>软件开发的不可预期性，比如无休止的会议，决策上的善变，复杂度的误判，解决各种bug，指导新手… 几乎没有开发人员相信日程规划是可行的。而这种不可预期在做商业决策的时候是绝对不能被容忍的。部分程序员为了确保按时完成，会在评估的时候加入一些“水分”来平衡这种不可预期，还有一些会因为缺乏经验或乐观主义导致估计不足，从此陷入无休止的加班。</p>
+<p>项目上的失败经验下篇再说，这篇主要记录读到Jeol在2007年写下的“循证式日程规划”这种方法，一口气读完非常受益，解答了很多疑惑</p>
+<p>来自《软件随想录》以下是文章的笔记。</p>
+<hr>
+<p>简单来说循证式日程规划最重要的目的之一是收集历史数据（记录每项工作开始时间和结束时间），通过计算得到一条概率分布曲线用来展现在任意给定日期完成工作的可能性有多大。</p>
+<p>如果你不搞一个日程规划，程序员就会首先将容易的/有趣的功能做出来。然后，他们剩下的时间就不够了，你别无选择，只好推迟日程来开发有用的或重要的功能。</p>
+<p>（1）<strong>分解时间</strong>：任务需要以“小时”为单位进行拆分，<code>不能有任何任务所需的时间超过16小时</code>；比如ERP库存模块为例，没有在细节上想清楚工作步骤，就在日程规划上创建一个3周工时的大任务，其实不知道它究竟要花费多少时间；首先需要做的是讨论并将模块拆分为“出库单”，“入库单”，“转储单”，“库存过账记录”等详细的功能并且控制到16小时以内。</p>
+<p>（2) <strong>追踪时间的用途</strong>：如何准确的估计完成单个任务所需的时间？考虑到各种莫名其妙的错误，一场接一场的会议，崩溃的Windows系统，Jeol给出的结论是<code>你不能，真的。</code>我们能做的只是客观的记录下每项任务的实际时间长度以追踪完成速率，<code>(完成速率) = (估计用时)/(实际用时)</code></p>
 <blockquote>
-<p> 开发版集成了usb转串口模块, 使用的是CH340芯片, 需要安装驱动</p>
+<ul>
+<li>传说中完美的估计者，这种人估计用时总是等于实际用时，历史数据就是 {1, 1, 1, 1, 1, …}</li>
+<li>糟糕的估计者，完成速率比较分散，比如 {0.1, 0.5, 1.7, 0.2, 1.2, 0.9, 13.0}</li>
+<li>大多数估计者都属于估计不足，但是相对值稳定，因为在这种方法中我们不考虑那些打断我们工作的麻烦问题，历史数据看起来就像 {0.6, 0.5, 0.6, 0.6, 0.5, 0.6, 0.7, 0.6}， 总是小于1</li>
+</ul>
 </blockquote>
-<p><a href="http://www.wch.cn/download/CH341SER_MAC_ZIP.html" target="_blank" rel="noopener">http://www.wch.cn/download/CH341SER_MAC_ZIP.html</a></p>
-<p><strong>确认驱动是否安装成功</strong></p>
+<p>当估计者逐渐变得有经验后，他们估计精度就会提高，以6个月为周期弃用陈旧的数据。</p>
+<p>（3）<strong>对未来情况进行模拟</strong>：使用<a href="https://wiki.mbalib.com/wiki/蒙特卡罗方法" target="_blank" rel="noopener">蒙特卡洛方法</a>来计算任意一名程序员在未来任意一种情况下的实际完成时间，具体做法是用每个任务的估计用时去除以这个程序员历史数据（在（2）中得到的数据）中完成速率的一个随机选择的值， 例如：</p>
 <blockquote>
-<p>需要把单片机连接上电脑</p>
+<table>
+<thead>
+<tr>
+<th>估计用时:</th>
+<th align="left">4</th>
+<th align="left">8</th>
+<th>2</th>
+<th>8</th>
+<th>16</th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>随机完成速率:</td>
+<td align="left">0.6 &nbsp;</td>
+<td align="left">0.5 &nbsp;</td>
+<td>0.6 &nbsp;</td>
+<td>0.6 &nbsp;</td>
+<td>0.5 &nbsp;</td>
+<td>总计:</td>
+</tr>
+<tr>
+<td>期望用时:</td>
+<td align="left">6.7</td>
+<td align="left">16</td>
+<td>3.3</td>
+<td>13.3</td>
+<td>32</td>
+<td>71.3</td>
+</tr>
+</tbody></table>
 </blockquote>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> ls /dev/tty.wchusbserial*</span></span><br><span class="line">/dev/tty.wchusbserial1420</span><br></pre></td></tr></table></figure>
-
-<p><strong>安装 stcgal 烧录程序</strong></p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip3 install stcgal</span><br></pre></td></tr></table></figure>
-
-<h3 id="VSCode-配置"><a href="#VSCode-配置" class="headerlink" title="VSCode 配置"></a>VSCode 配置</h3><p>需要安装 Code Runner 插件</p>
-<p>编辑配置文件 <code>.vscode/c_cpp_properties.json</code></p>
-<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="attr">"configurations"</span>: [</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="attr">"name"</span>: <span class="string">"51"</span>,</span><br><span class="line">            <span class="attr">"includePath"</span>: [</span><br><span class="line">                <span class="string">"$&#123;workspaceFolder&#125;/**"</span>,</span><br><span class="line">                <span class="string">"/usr/local/Cellar/sdcc/3.9.0/share/sdcc/include"</span>,</span><br><span class="line">                <span class="string">"/usr/local/Cellar/sdcc/3.9.0/share/sdcc/include/mcs51"</span></span><br><span class="line">            ],</span><br><span class="line">            <span class="attr">"defines"</span>: [],</span><br><span class="line">            <span class="attr">"compilerPath"</span>: <span class="string">"/usr/local/Cellar/sdcc/3.9.0/bin/sdcc"</span>,</span><br><span class="line">            <span class="attr">"cStandard"</span>: <span class="string">"c11"</span>,</span><br><span class="line">            <span class="attr">"cppStandard"</span>: <span class="string">"c++17"</span>,</span><br><span class="line">            <span class="attr">"intelliSenseMode"</span>: <span class="string">"clang-x64"</span></span><br><span class="line">        &#125;</span><br><span class="line">    ],</span><br><span class="line">    <span class="attr">"version"</span>: <span class="number">4</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>编辑配置文件 <code>.vscode/settings.json</code></p>
-<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="attr">"files.associations"</span>: &#123;</span><br><span class="line">        <span class="attr">"8052.h"</span>: <span class="string">"c"</span>,</span><br><span class="line">        <span class="attr">"8051.h"</span>: <span class="string">"c"</span></span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="attr">"code-runner.executorMap"</span>: &#123;</span><br><span class="line">        <span class="attr">"c"</span>: <span class="string">"cd $dir &amp; sdcc $fileName &amp; stcgal -P stc89 -p /dev/tty.wchusbserial1420 $fileNameWithoutExt.ihx"</span>,</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p><strong>第一个测试程序</strong></p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;8052.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> ADDR0 P0_0</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    ADDR0 = <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>⌃⌥N 运行, 提示</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Waiting for MCU, please cycle power:</span><br></pre></td></tr></table></figure>
-
-<p>开发版重新上电后，第一个led亮起</p>
+<p>对于100种可能发生的情况，重复上面的计算过程，每种情况的可能性是1%，即可以估计出在任意时间节点完成的概率。当前会得到的数据比如 {71.3, 60.1, 55.6, 80.3 …}</p>
+<blockquote>
+<ul>
+<li>传说中完美的估计者， 在某个日期的完成概率是100%， 完美的不真实</li>
+<li>糟糕的估计者，比如从0.1到13这么大的跨度区间会导致概率分布曲线接近于平坦，没有多大的参考价值</li>
+<li>普通估计者，期望用时都会比估计用时大出一块，这是对于估计者根深蒂固的乐观主义的一种补偿，这种补偿层度非常准确，因为它是基于程序员一贯的乐观主义的，已经从历史数据中得到证明。</li>
+</ul>
+</blockquote>
+<p>当然在每一轮的蒙特卡洛模拟中，你必须将以小时为单位的数据转化成具体的日历上的日期。这意味着你必须考虑到每一个程序员的工作日程、他们的休息日和假期等。比如将上面的数据转换成{“2020-01-01”: 0.01, “2020-01-02”: 0.2, “2020-01-05”: 0.02 …} 诸如此类的格式。</p>
+<p>Jeol关于日程规划中还得出了另外几条经验</p>
+<blockquote>
+<ol>
+<li><strong>只有第一线的程序员才能提出完成日期的估计值。</strong>任何由管理层制定然后交给程序员去执行的日程规划，都注定失败。</li>
+<li><strong>当新代码出现错误以后，就将解决问题的时间算进你原先写出错误代码的那段用时之中。</strong>这有助于循证式日程规划预计出得到可靠代码所需的时间，而不是得到可以运行的初步代码所需的时间。</li>
+<li><strong>防止管理层向程序员施加压力，要求加快开发速度。</strong>日程规划并不是一个玩心理游戏的地方。你也许可以多雇几个人，但是新雇员需要一段时间才能赶上别人的速度，开头的几个月他们的效率可能只有别人的50%（他们还降低了指导他们的人的效率）。如果你让手下的团队整个一年都超负荷工作，最终写出来的源代码可能会比正常数量<code>暂时性地</code>多出10%。这并不是很大的收益，而且有点类似于你在吃种子粮。</li>
+<li><strong>一份日程规划就是一个装满木块的盒子。</strong>如果你有一堆木块，你无法将他们装入盒子，你就有两个选择，要么找一个大一点的盒子，要么拿掉几个木块。不要自欺欺人。</li>
+</ol>
+</blockquote>
+<hr>
+<p>以上是笔记内容。</p>
 
                 </div>
             </div>
     
             <nav class="post-pagination">
     
-    <a class="newer-posts" href="/2020/02/05/%E9%9D%92%E6%B5%B7%E7%94%98%E8%82%83%E7%8E%AF%E7%BA%BF%E6%97%85%E8%A1%8C/">
-        上一篇<br>青海甘肃环线旅行
-    </a>
-    
     <span class="page-number"></span>
     
-    <a class="older-posts" href="/2019/12/30/Python%E5%AE%9E%E7%8E%B0%E5%BE%AE%E6%9C%8D%E5%8A%A1%E4%BB%8E%E5%90%AC%E8%BF%87%E5%88%B0%E7%95%A5%E6%87%82/">
-        下一篇<br>Python实现微服务从听过到略懂
+    <a class="older-posts" href="/2020/05/24/2020%E5%B9%B4%E4%B9%A6%E5%8D%95/">
+        下一篇<br>2020年书单
     </a>
     
 </nav>
@@ -270,24 +302,7 @@
         integrity="sha256-FtWfRI+thWlNz2sB3SJbwKx5PgMyKIVgwHCTwa3biXc=" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/smooth-scroll@14.2.1/dist/smooth-scroll.polyfills.min.js"
         integrity="sha256-CI4Gq5E0io1Pv0xM3qPM+NUIOhbIBvC3GiN1Y4KhXpw=" crossorigin="anonymous"></script>
-<script src="/js/journal.js?4872693"></script><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
-<script type="text/x-mathjax-config">
-  MathJax.Hub.Config("");
-</script>
-
-<script type="text/x-mathjax-config">
-  MathJax.Hub.Queue(function() {
-    var all = MathJax.Hub.getAllJax(), i;
-    for(i=0; i < all.length; i += 1) {
-      all[i].SourceElement().parentNode.className += ' has-jax';
-    }
-  });
-</script>
-
-<script type="text/javascript" src="">
-</script>
-<!-- End: Injected MathJax -->
-<!-- hexo-inject:end -->
+<script src="/js/journal.js?10257975"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 
 
 
