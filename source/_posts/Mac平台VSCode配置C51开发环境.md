@@ -2,22 +2,22 @@
 title: Mac平台VSCode配置C51开发环境
 date: 2020-01-06 10:35:08
 tags:
-	- 单片机
+	- 其他
 ---
 
-### 安装 sdcc 编译器
+**安装 sdcc 编译器**
 
 ``` shell
 brew install sdcc
 ```
 
-### 安装CH341驱动
+**安装CH341驱动**
 
 >  开发版集成了usb转串口模块, 使用的是CH340芯片, 需要安装驱动
 
 http://www.wch.cn/download/CH341SER_MAC_ZIP.html
 
-### 确认驱动是否安装成功
+**确认驱动是否安装成功**
 
 > 需要把单片机连接上电脑
 
@@ -26,7 +26,7 @@ $ ls /dev/tty.wchusbserial*
 /dev/tty.wchusbserial1420
 ```
 
-### 安装 stcgal 烧录程序
+**安装 stcgal 烧录程序**
 
 ``` shell
 pip3 install stcgal
@@ -73,7 +73,7 @@ pip3 install stcgal
 }
 ```
 
-### 第一个测试程序
+**第一个测试程序**
 
 ``` c
 #include <8052.h>

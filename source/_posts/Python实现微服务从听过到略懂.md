@@ -10,13 +10,13 @@ tags:
 
 python3, flask, python-consul, docker
 
-### 使用docker 拉取 consul
+**使用docker 拉取 consul**
 
 ``` shell
 docker pull consul
 ```
 
-### 使用docker-compose 编排 consul 容器， 为了快速搞定注册发现这块， 启一个节点测试用， 生产环境别这么搞
+**使用docker-compose 编排 consul 容器， 为了快速搞定注册发现这块， 启一个节点测试用， 生产环境别这么搞**
 
 ``` shell
 version: '3.1'
@@ -31,31 +31,31 @@ services:
     command: agent -server -ui -node=server-1 -bootstrap-expect=1 -client=0.0.0.0
 ```
 
-### 切换到 docker-compose.yml 所在目录运行
+**切换到 docker-compose.yml 所在目录运行**
 
 ``` shell
 docker-compose up -d
 ```
 
-### 访问8500
+**访问8500**
 
 ...
 
-### 测试consul DNS 解析
+**测试consul DNS 解析**
 
 ``` shell
 dig @127.0.0.1 -p 8600 consul.service.dc1.consul. ANY
 ```
 
-### ~~本机如果没有dig命令， 替代方法~~   
+**~~本机如果没有dig命令， 替代方法~~**
 
 ``` shell
 docker run --rm  azukiapp/dig:latest dig @0.0.0.0 -p 8600 consul.service.dc1.consul. ANY
 ```
 
-### 上面的命令有问题...换成宿主机ip也不成？ 先不研究这个，安装dig命令吧
+上面的命令有问题...换成宿主机ip也不成？ 先不研究这个，安装dig命令吧
 
-### 返回结果应该包含节点IP地址
+**返回结果应该包含节点IP地址**
 
 ``` shell
 ; <<>> DiG 9.10.6 <<>> @127.0.0.1 -p 8600 consul.service.dc1.consul. ANY
@@ -83,19 +83,19 @@ consul.service.dc1.consul. 0	IN	TXT	"consul-network-segment="
 
 ### 搭建 flask 开发环境
 
-#### create venv
+**create venv**
 
 ``` shell
 mkdir myproject && cd myproject && python3 -m venv venv
 ```
 
-#### active venv
+**active venv**
 
 ``` shell
 . venv/bin/activate
 ```
 
-#### install flask
+**install flask**
 
 ``` shell
 pip install flask
@@ -106,7 +106,7 @@ pip install python-consul
 
 ## 现在正式开始
 
-### 编写第一个服务, firstapp.py
+**编写第一个服务, firstapp.py**
 
 ``` python
 from flask import Flask
@@ -120,13 +120,13 @@ def index():
     return res
 ```
 
-### 启动第一个服务
+**启动第一个服务**
 
 ``` shell
 export FLASK_ENV=development && export FLASK_APP=firstapp.py && flask run --host=0.0.0.0 --port=5000
 ```
 
-### 编写第二个服务， secondapp.py
+**编写第二个服务， secondapp.py**
 
 ``` python
 from flask import Flask
@@ -140,13 +140,13 @@ def index():
     return res
 ```
 
-### 启动第二个服务
+**启动第二个服务**
 
 ``` shell
 export FLASK_ENV=development && export FLASK_APP=secondapp.py && flask run --host=0.0.0.0 --port=5001
 ```
 
-### 将两个服务注册到consul的脚本
+**将两个服务注册到consul的脚本**
 
 ``` shell
 function register() {
@@ -185,7 +185,7 @@ for i in "${servs[@]}"; do
 done
 ```
 
-### 或者用另一种方式， 在代码里使用 python-consul注册服务， 修改 firstapp.py
+**或者用另一种方式， 在代码里使用 python-consul注册服务， 修改 firstapp.py**
 
 ``` python
 from flask import Flask
@@ -221,7 +221,7 @@ def index():
     return res
 ```
 
-### 修改secondapp.py
+**修改secondapp.py**
 
 ```python
 from flask import Flask

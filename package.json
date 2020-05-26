@@ -23,5 +23,9 @@
     "hexo-renderer-marked": "^2.0.0",
     "hexo-renderer-stylus": "^1.1.0",
     "hexo-server": "^1.0.0"
+  },
+  "devDependencies": {
+    "hexo-inject": "^1.0.0",
+    "hexo-math": "^3.0.4"
   }
 }
